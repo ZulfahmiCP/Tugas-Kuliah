@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tugas SSD</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="responsive.css" />
+		<link rel = "icon" type = "image/png" href = "assets/SSD_Icon.png">
+	</head>
+	<body>
+		<header>
+			<div class = "judul">
+			  <p>
+				Tugas Final Sistem Digital<br>
+			  Seven Segment Display<br>
+			  </p>
+			</div>
+		</header>
+		<main>
+			<div class = "container">
+				<div class = "display">
+					<div id = "A" class="segment"></div>
+					<div id = "D" class="segment"></div>
+					<div id = "G" class="segment"></div>
+					<div id = "F" class="segment"></div>
+					<div id = "B" class="segment"></div>
+					<div id = "E" class="segment"></div>
+					<div id = "C" class="segment"></div>
+				</div>
+
+				<div class = "TruthTable">
+					<table>
+					  <tr id = "Input">
+						<th colspan = "4">Input</th>
+						<th colspan = "7">Output</th>
+					  </tr>
+					  <tr id = "IO-Name">
+						<th>W</th>
+						<th>X</th>
+						<th>Y</th>
+						<th>Z</th>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+						<th>D</th>
+						<th>E</th>
+						<th>F</th>
+						<th>G</th>
+					  </tr>
+					  <tr id = "Output">
+						<th id = "InputW">0</th>
+						<th id = "InputX">0</th>
+						<th id = "InputY">0</th>
+						<th id = "InputZ">0</th>
+						<th id = "OutputA">0</th>
+						<th id = "OutputB">0</th>
+						<th id = "OutputC">0</th>
+						<th id = "OutputD">0</th>
+						<th id = "OutputE">0</th>
+						<th id = "OutputF">0</th>
+						<th id = "OutputG">0</th>
+					  </tr>
+					</table>
+				  </div>
+
+				  <div class="Button">
+					  <button onclick = "sevenSegment(1)">1</button>
+					  <button onclick = "sevenSegment(2)">2</button>
+					  <button onclick = "sevenSegment(3)">3</button>
+					  <button onclick = "sevenSegment(4)">4</button>
+					  <button onclick = "sevenSegment(5)">5</button>
+					  <button onclick = "sevenSegment(6)">6</button>
+					  <button onclick = "sevenSegment(7)">7</button>
+					  <button onclick = "sevenSegment(8)">8</button>
+					  <button onclick = "sevenSegment(9)">9</button>
+					  <button onclick = "sevenSegment(0)">0</button>
+					</div>
+			</div>
+		  
+		</main>
+
+		<footer>
+			<div class = "Identitas">
+			  <p>
+				Zulfahmi<br>
+				D121231011<br>
+			  </p>
+			</div>
+		  </footer>
+		<script src="script.js"></script>
+	</body>
+</html>

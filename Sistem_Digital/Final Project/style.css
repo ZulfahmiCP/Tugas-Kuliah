@@ -1,0 +1,204 @@
+* :is(.segment) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* :not(.segment) {
+  --cool_blue: #70e0f0;
+  background-color: black;
+  color: white;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  min-height: 100vh;
+}
+
+.judul {
+  font-family: "Poppins";
+  font-size: 4rem;
+
+  margin-top: 80px;
+  margin-bottom: 200px;
+
+  height: 4rem;
+  font-weight: 600;
+}
+
+.display {
+  --width: min(10rem, 20vw);
+  width: var(--width);
+
+  aspect-ratio: 5/8;
+  position: relative;
+  margin: auto;
+}
+
+.segment {
+  --unit: calc(0.2 * var(--width));
+  --offset: 2px;
+  --on: var(--unit) solid var(--cool_blue);
+  --off: var(--unit) solid transparent;
+  --off-half: calc(0.5 * var(--unit)) solid transparent;
+
+  position: absolute;
+  border-radius: 100vw;
+}
+
+#A, #D {
+  left: var(--offset);
+  right: var(--offset);
+  border-left: var(--off);
+  border-right: var(--off);
+}
+
+#A {
+  top: 0;
+  border-top: var(--on);
+}
+
+#D {
+  bottom: 0;
+  border-bottom: var(--on);
+}
+
+#G {
+  top: calc(50% - 0.5 * var(--unit));
+  left: calc(3 * var(--offset));
+  right: calc(3 * var(--offset));
+  height: calc(var(--unit));
+
+  background-color: var(--cool_blue);
+  clip-path: polygon(0% 50%,
+      var(--unit) 0%,
+      calc(100% - var(--unit)) 0%,
+      100% 50%,
+      calc(100% - var(--unit)) 100%,
+      var(--unit) 100%);
+}
+
+#F, #B {
+  top: var(--offset);
+  height: calc(50% - var(--offset));
+  border-top: var(--off);
+  border-bottom: var(--off-half);
+}
+
+#F {
+  left: 0;
+  border-left: var(--on);
+}
+
+#B {
+  right: 0;
+  border-right: var(--on);
+}
+
+#E, #C {
+  height: calc(50% - var(--offset));
+  bottom: var(--offset);
+  border-top: var(--off-half);
+  border-bottom: var(--off);
+}
+
+#E {
+  left: 0;
+  border-left: var(--on);
+}
+
+#C {
+  right: 0;
+  border-right: var(--on);
+}
+
+.TruthTable tr, th {
+  --calm_blue: #243B4A;
+  --oxford_blue: #2E5EAA;
+
+  font-family: "Fira Code";
+  font-weight: bold;
+
+  border: 2px solid black;
+  margin: auto;
+  padding: 15px 25px;
+}
+
+.TruthTable table {
+  display: grid;
+  place-items: center;
+}
+
+.TruthTable th {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 2rem;
+}
+
+#Input th, #IO-Name th {
+  background-color: var(--calm_blue);
+}
+
+#Output th {
+  background-color: var(--oxford_blue);
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 700px;
+  height: 300px;
+}
+
+.Button button {
+  font-family: 'Fira Code';
+  
+  display: flex;
+  height: 8rem;
+  width: 8rem;
+  font-size: 3.2rem;
+
+  border-radius: 20px;
+  border: 3px solid lightblue;
+
+  cursor: pointer;
+}
+
+.Button button:hover {
+  background-color: lightskyblue;
+  --Shadow: 0px 0px 70px 1.2rem rgba(49, 160, 235, 0.75);
+  
+  box-shadow: var(--Shadow);
+  -webkit-box-shadow: var(--Shadow);
+  -moz-box-shadow: var(--Shadow);
+}
+
+.Button button:active {
+  background-color: lightsteelblue;
+}
+
+.Identitas p {
+  font-family: "Poppins";
+  letter-spacing: 2px;
+  font-size: 3rem;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 200px;
+  font-weight: 600;
+}
