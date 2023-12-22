@@ -2,8 +2,7 @@
 #include <math.h>
 
 float formula(float x){
-    float y;
-    y = 3 * x - 1;
+    float y = 3 * x - 1;
     return y;
 }
 
